@@ -1,0 +1,15 @@
+package com.gmail.chase4926.firesmelting;
+
+//import org.bukkit.command.Command;
+//import org.bukkit.command.CommandSender;
+import org.bukkit.plugin.java.JavaPlugin;
+
+public class FireSmelting extends JavaPlugin {
+	public FireSmelting() {
+		
+	}
+	//public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+	//	if (cmd.getName().equalsIgnoreCase(""))
+	//	return false;
+	//}
+}

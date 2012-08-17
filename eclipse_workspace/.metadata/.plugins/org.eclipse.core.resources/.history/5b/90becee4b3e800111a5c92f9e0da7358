@@ -1,0 +1,11 @@
+package com.gmail.chase4926.firesmelting;
+
+import org.bukkit.event.Listener;
+
+public class FireSmeltingListener implements Listener {
+
+	public FireSmeltingListener(FireSmelting fireSmelting) {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,17 @@
+package com.gmail.chase4926.firesmelting;
+
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerMoveEvent;
+
+public class FireSmeltingListener implements Listener {
+	FireSmelting plugin = null;
+	public FireSmeltingListener(FireSmelting p) {
+		plugin = p;
+	}
+	
+	@EventHandler
+	public void BurnPlayersThatStepOnHotIron(PlayerMoveEvent event) {
+		
+	}
+}

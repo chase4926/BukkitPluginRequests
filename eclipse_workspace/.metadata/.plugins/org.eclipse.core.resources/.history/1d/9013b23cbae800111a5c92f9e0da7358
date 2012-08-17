@@ -1,0 +1,9 @@
+name: FireSmelting
+main: com.gmail.chase4926.firesmelting.FireSmelting
+version: 0.1
+commands:
+   firesmelting:
+      description: Toggles the ability to use FireSmelting.
+      usage: /<command>
+      permission: firesmelting.toggle
+      permission-message: You don't have <permission>

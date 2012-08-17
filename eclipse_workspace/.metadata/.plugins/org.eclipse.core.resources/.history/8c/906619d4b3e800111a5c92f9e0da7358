@@ -1,0 +1,7 @@
+package com.gmail.chase4926.firesmelting;
+
+import org.bukkit.event.Listener;
+
+public class FireSmeltingListener implements Listener {
+
+}

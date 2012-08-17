@@ -1,0 +1,23 @@
+package com.gmail.chase4926.firesmelting;
+
+import org.bukkit.Location;
+import org.bukkit.Material;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerMoveEvent;
+
+public class FireSmeltingListener implements Listener {
+	FireSmelting plugin = null;
+	public FireSmeltingListener(FireSmelting p) {
+		plugin = p;
+	}
+	
+	@EventHandler
+	public void BurnPlayersThatStepOnHotIron(PlayerMoveEvent event) {
+		Location location = event.getTo();
+		if (location.getBlock().getRelative(0, -1, 0).getType() == Material.IRON_BLOCK && location.getBlock().getRelative(0, -2, 0).getType() == Material.FIRE) {
+			event.getPlayer().damage(1);
+			event.getPlayer().setFireTicks(1);
+		}
+	}
+}
