@@ -1,0 +1,34 @@
+package com.gmail.chase4926.lightningiron;
+
+import org.bukkit.Bukkit;
+import org.bukkit.Material;
+import org.bukkit.block.Block;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.block.BlockRedstoneEvent;
+
+public class LightningIronListener implements Listener {
+	LightningIron plugin = null;
+	
+	public LightningIronListener(LightningIron p) {
+		plugin = p;
+	}
+	
+	@EventHandler
+	public void strikeLightingOnPower(BlockRedstoneEvent event) {
+		//if (event.getBlock().getType() == Material.IRON_BLOCK && event.getOldCurrent() == 0) {
+		//	// Is an iron block, previously unpowered
+		//	event.getBlock().getWorld().strikeLightning(event.getBlock().getLocation());
+		//} else {
+		//	System.out.println(event.getBlock().getType());
+		//}
+		Block poweredBlock = event.getBlock();
+		int poweredBlockDataValue = poweredBlock.getTypeId();
+		byte poweredBlockMetaValue = poweredBlock.getData();
+		Block modifier = poweredBlock.getRelative(0,-1,0);
+		int modifierDataValue = modifier.getTypeId();
+		byte modifierMetaValue = modifier.getData();
+		Bukkit.getServer().broadcastMessage("Block Type: " + poweredBlockDataValue +":" + poweredBlockMetaValue);
+		Bukkit.getServer().broadcastMessage("Modifier Type: " + modifierDataValue +":" + modifierMetaValue);
+	}
+}

@@ -1,0 +1,7 @@
+package com.gmail.chase4926.lightningiron;
+
+import org.bukkit.event.Listener;
+
+public class LightningIronListener implements Listener {
+	
+}

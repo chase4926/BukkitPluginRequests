@@ -1,0 +1,22 @@
+package com.gmail.chase4926.lightningiron;
+
+import org.bukkit.Material;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.block.BlockRedstoneEvent;
+
+public class LightningIronListener implements Listener {
+	LightningIron plugin = null;
+	
+	public LightningIronListener(LightningIron p) {
+		plugin = p;
+	}
+	
+	@EventHandler
+	public void strikeLightingOnPower(BlockRedstoneEvent event) {
+		if (event.getBlock().getType() == Material.IRON_BLOCK && event.getOldCurrent() == 0) {
+			// Is an iron block, previously unpowered
+			event.getBlock().getWorld().strikeLightning(event.getBlock().getLocation());
+		}
+	}
+}
